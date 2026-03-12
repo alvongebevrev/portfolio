@@ -1,0 +1,208 @@
+/* ===== Box-sizing global ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #000;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #1f78ff;
+    color: #fff;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* ===== GRILLES ===== */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* ===== TITRES ===== */
+h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ===== HOME ===== */
+.home-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 20px;
+    text-align: center;
+}
+
+/* ===== PHOTO PROFIL ===== */
+.home-img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1f78ff;
+}
+
+/* ===== SOCIAL ===== */
+.social-media a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #1f78ff;
+}
+
+/* ===== BOUTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #1f78ff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #1558b0;
+    transform: scale(1.05);
+}
+
+/* ===== GROUPE DE BOUTONS CV / TABLEAU ===== */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btn-group .btn {
+    margin-top: 0;
+}
+
+/* ===== FORMULAIRES ===== */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* ===== SECTION ANCRE SCROLL ===== */
+section {
+    scroll-margin-top: 80px; /* décale le scroll pour le header sticky */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* ===== VEILLE TECHNOLOGIQUE ===== */
+#veille-technologique .card {
+    text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .home-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
